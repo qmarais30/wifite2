@@ -1,0 +1,29 @@
+root@kali:~/wifite2# ./Wifite.py --crack --dic ./rockyou.txt
+  .               .    
+.´  ·  .     .  ·  `.  wifite 2.1.6
+:  :  :  (¯)  :  :  :  automated wireless auditor
+`.  ·  ` /¯\ ´  ·  .´  https://github.com/derv82/wifite2
+  `     /¯¯¯\     ´    
+
+ [+] option: wordlist ./rockyou.txt was not found, wifite will NOT attempt to crack handshakes
+ [+] Listing captured handshakes from /root/wifite2/hs
+
+
+ [!] Error: No handshakes found in /root/wifite2/hs
+
+ [!] Full stack trace below
+
+ [!]    Traceback (most recent call last):
+ [!]    File "/root/wifite2/wifite/wifite.py", line 258, in run
+ [!]        w.main()
+ [!]    File "/root/wifite2/wifite/wifite.py", line 44, in main
+ [!]        CrackHandshake()
+ [!]    File "/root/wifite2/wifite/util/crack.py", line 18, in __init__
+ [!]        handshake = self.choose_handshake()
+ [!]    File "/root/wifite2/wifite/util/crack.py", line 107, in choose_handshake
+ [!]        raise Exception("No handshakes found in %s" % os.path.realpath(hs_dir))
+ [!]  Exception: No handshakes found in /root/wifite2/hs
+
+ [!] Exiting
+
+root@kali:~/wifite2# 
